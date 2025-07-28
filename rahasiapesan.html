@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesan Rahasia</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 80px;}
+    #pesanRahasia { 
+      display: none; 
+      background: #fffbe7; 
+      border-radius: 10px; 
+      margin: 20px auto; 
+      padding: 30px 40px; 
+      max-width: 350px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10); 
+      font-size: 1.2em;
+      color: #444;
+    }
+    input { padding: 7px 10px; font-size: 1em; }
+    button { padding: 7px 20px; font-size: 1em; }
+  </style>
+</head>
+<body>
+  <h2>Buka Pesan Rahasia</h2>
+  <input type="password" id="password" placeholder="Masukkan password">
+  <button onclick="cekPassword()">Buka</button>
+  <div id="pesanRahasia">
+    YAHAHAHA PLUIT
+  </div>
+  <script>
+    function cekPassword() {
+      var pass = document.getElementById('password').value;
+      if (pass === "danuganteng") { // Ubah password sesuai keinginan
+        document.getElementById('pesanRahasia').style.display = "block";
+      } else {
+        document.getElementById('pesanRahasia').style.display = "none";
+        alert("Password salah!");
+      }
+    }
+  </script>
+</body>
+</html>
